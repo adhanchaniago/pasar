@@ -3,7 +3,8 @@ class Listing < ActiveRecord::Base
     if Rails.env.development?
         
         has_attached_file   :image, :styles => { :medium => "300x", :thumb => "100x" }, 
-                            :default_url => "default.jpg"
+                            :default_url => "default.jpg",
+                            :convert_options => {:medium => '-background white -gravity center -extent 200x200'}
                             validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
     else
         

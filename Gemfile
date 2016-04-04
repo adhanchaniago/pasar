@@ -14,7 +14,7 @@ gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'rails_admin'
 
 group :development, :test do
   gem 'sqlite3'     
